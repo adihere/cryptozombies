@@ -22,7 +22,7 @@ contract ZombieFactory {
     }
 
     // start here
-    funtion createRandomZombie(string memory _name) public() {
+    function createRandomZombie(string memory _name) public() {
         uint randDna = uint(keccak256(abi.encodePacked(_name)));
         _createZombie(_name,randDna);
     }
