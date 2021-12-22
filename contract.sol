@@ -1,4 +1,6 @@
-pragma solidity  >=0.5.0 <0.6.0;
+// SPDX-License-Identifier: GPL-3.0
+
+pragma solidity  >=0.5.0 <0.8.12;
 
 contract ZombieFactory {
 
@@ -22,7 +24,7 @@ contract ZombieFactory {
     }
 
     // start here
-    function createRandomZombie(string memory _name) public() {
+    function createRandomZombie(string memory _name) public {
         uint randDna = uint(keccak256(abi.encodePacked(_name)));
         _createZombie(_name,randDna);
     }
